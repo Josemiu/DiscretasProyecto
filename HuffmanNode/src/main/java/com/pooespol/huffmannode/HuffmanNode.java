@@ -8,9 +8,27 @@ package com.pooespol.huffmannode;
  *
  * @author José Miguel
  */
-public class HuffmanNode {
+public class HuffmanNode implements Comparable<HuffmanNode> {
+    int frecuencia;
+    char caracter;
+    HuffmanNode izquierda;
+    HuffmanNode derecha;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public HuffmanNode(int frecuencia, char caracter) {
+        this.frecuencia = frecuencia;
+        this.caracter = caracter;
+        this.izquierda = null;
+        this.derecha = null;
+    }
+
+    public HuffmanNode(int frecuencia, HuffmanNode izquierda, HuffmanNode derecha) {
+        this.frecuencia = frecuencia;
+        this.izquierda = izquierda;
+        this.derecha = derecha;
+    }
+
+    @Override
+    public int compareTo(HuffmanNode o) {
+        return this.frecuencia - o.frecuencia;
     }
 }

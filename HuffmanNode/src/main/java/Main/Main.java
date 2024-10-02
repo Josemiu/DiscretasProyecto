@@ -10,6 +10,7 @@ import interfaz.HuffmanApp;
  */
 public class Main {
     public static void main(String[] args) {
-        HuffmanApp.main(args);
+        //HuffmanApp.main(args);
+        System.out.println("Funciona");
     }
 }
